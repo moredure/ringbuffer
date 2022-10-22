@@ -3,8 +3,6 @@ package ringbuffer
 import (
 	"fmt"
 	"io"
-	"runtime"
-	"sync"
 )
 
 // Buffer is a simple implementation of a ring/circular buffer.
