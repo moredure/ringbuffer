@@ -71,6 +71,10 @@ func (b *Buffer) Bytes() []byte {
 	return p
 }
 
+func (b *Buffer) String() string {
+	return string(b.Bytes())
+}
+
 func (b *Buffer) copyToBuffer(p []byte, start int) {
 	N := len(b.buf)
 	P := len(p)
