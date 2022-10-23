@@ -34,9 +34,8 @@ func (b *Buffer) Read(p []byte) (int, error) {
 	b.read += maxBytes
 	if maxBytes == 0 {
 		return 0, io.EOF
-	} else {
-		return maxBytes, nil
-	}
+	} 
+	return maxBytes, nil
 }
 
 // Write writes to the buffer, circularly overwriting data if p exceeds the
@@ -109,7 +108,7 @@ func (b *Buffer) copyFromBuffer(p []byte, start int) {
 
 func min(n, m int) int {
 	if n <= m {
-		return int(n)
+		return n
 	}
 	return m
 }
